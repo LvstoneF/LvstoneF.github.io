@@ -5,19 +5,19 @@
   
 
   
-  <title>Hello World | Lvstone Blog</title>
+  <title>Lvstone Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="MD5   1 报文摘要 对应SM3 hash 分组密码    2 数字指纹 单向散列算法 输出 （128-bit） 任意输入   算法过程 算法过程     id 名称 实现过程 填充方法    第一步 填充 报文长度 L % 512 不等于 448，就需要填充，使得满足之前的条件 第一位填 （1），后面填上 k g个（0），使得$（L+1+k）mod (512) == 448$， 消息长度变为">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://LvstoneF.github.io/2019/08/05/hello-world/index.html">
+<meta property="og:title" content="Lvstone Blog">
+<meta property="og:url" content="https://LvstoneF.github.io/2019/08/05/MD5/index.html">
 <meta property="og:site_name" content="Lvstone Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="MD5   1 报文摘要 对应SM3 hash 分组密码    2 数字指纹 单向散列算法 输出 （128-bit） 任意输入   算法过程 算法过程     id 名称 实现过程 填充方法    第一步 填充 报文长度 L % 512 不等于 448，就需要填充，使得满足之前的条件 第一位填 （1），后面填上 k g个（0），使得$（L+1+k）mod (512) == 448$， 消息长度变为">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-05T08:08:24.538Z">
+<meta property="og:updated_time" content="2019-08-02T09:08:47.686Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Lvstone Blog">
+<meta name="twitter:description" content="MD5   1 报文摘要 对应SM3 hash 分组密码    2 数字指纹 单向散列算法 输出 （128-bit） 任意输入   算法过程 算法过程     id 名称 实现过程 填充方法    第一步 填充 报文长度 L % 512 不等于 448，就需要填充，使得满足之前的条件 第一位填 （1），后面填上 k g个（0），使得$（L+1+k）mod (512) == 448$， 消息长度变为">
   
     <link rel="alternate" href="/atom.xml" title="Lvstone Blog" type="application/atom+xml">
   
@@ -68,46 +68,85 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-MD5" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/08/05/hello-world/" class="article-date">
-  <time datetime="2019-08-05T08:08:24.538Z" itemprop="datePublished">2019-08-05</time>
+    <a href="/2019/08/05/MD5/" class="article-date">
+  <time datetime="2019-08-05T08:49:49.772Z" itemprop="datePublished">2019-08-05</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hello World
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h1 id="MD5"><a href="#MD5" class="headerlink" title="MD5"></a>MD5</h1><table>
+<thead>
+<tr>
+<th>1</th>
+<th>报文摘要</th>
+<th>对应SM3</th>
+<th>hash</th>
+<th>分组密码</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2</td>
+<td>数字指纹</td>
+<td>单向散列算法</td>
+<td>输出 （128-bit）</td>
+<td>任意输入</td>
+</tr>
+</tbody></table>
+<h2 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a>算法过程</h2><ul>
+<li><p>算法过程</p>
+<ul>
+<li><table>
+<thead>
+<tr>
+<th>id</th>
+<th>名称</th>
+<th>实现过程</th>
+<th>填充方法</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>第一步</td>
+<td>填充</td>
+<td>报文长度 L % 512 不等于 448，就需要填充，使得满足之前的条件</td>
+<td>第一位填 （1），后面填上 k g个（0），使得$（L+1+k）mod (512) == 448$， 消息长度变为 $N*512+448 == L$</td>
+</tr>
+<tr>
+<td>第二部</td>
+<td>记录消息长度</td>
+<td>用64位来填充前消息长度$ L= N<em>512+448+64 = (N+1)</em>512$</td>
+<td></td>
+</tr>
+<tr>
+<td>第三步</td>
+<td>装入标准幻数</td>
+<td>$A = (01234567)<em>{16}, B = (89ABCDEF)</em>{16}, C = (FEDCBA98)<em>{16},  D = (76543210)</em>{16}$</td>
+<td></td>
+</tr>
+<tr>
+<td>第四步</td>
+<td>4轮运算</td>
+<td>1. 将每一512 字节分为16个小组，一组64位（8）个字节。</td>
+<td></td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li></li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://LvstoneF.github.io/2019/08/05/hello-world/" data-id="cjyy5otvm0006qcl2v0o92hqr" class="article-share-link">Share</a>
+      <a data-url="https://LvstoneF.github.io/2019/08/05/MD5/" data-id="cjyy5otva0001qcl2vqh7bayo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -116,7 +155,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2019/08/05/算法总结/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/05/SM2椭圆曲线公钥算法/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -125,6 +164,11 @@
       </div>
     </a>
   
+  
+    <a href="/2019/08/05/ECC算法-椭圆曲线算法/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
   
 </nav>
 

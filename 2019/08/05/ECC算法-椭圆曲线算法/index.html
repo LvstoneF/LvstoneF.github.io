@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Lvstone Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ECC算法-椭圆曲线算法前言 基于离散对数设计的密码。 ECC14 == RSA1024位密钥加密强度，而且计算量更小，速度更快， 运用于我国的二代身份证，比特币也将ECC作为加密算法  椭圆曲线阿贝尔群 已知集合和运算(G,*)如果是群，必须要满足以下要求 封闭性：$\forall a b \in G, a*b\in G$ 结合性：$\forall a, b,c\in G, (ab)*c = a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lvstone Blog">
+<meta property="og:url" content="https://LvstoneF.github.io/2019/08/05/ECC算法-椭圆曲线算法/index.html">
+<meta property="og:site_name" content="Lvstone Blog">
+<meta property="og:description" content="ECC算法-椭圆曲线算法前言 基于离散对数设计的密码。 ECC14 == RSA1024位密钥加密强度，而且计算量更小，速度更快， 运用于我国的二代身份证，比特币也将ECC作为加密算法  椭圆曲线阿贝尔群 已知集合和运算(G,*)如果是群，必须要满足以下要求 封闭性：$\forall a b \in G, a*b\in G$ 结合性：$\forall a, b,c\in G, (ab)*c = a">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-07-29T02:45:48.332Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lvstone Blog">
+<meta name="twitter:description" content="ECC算法-椭圆曲线算法前言 基于离散对数设计的密码。 ECC14 == RSA1024位密钥加密强度，而且计算量更小，速度更快， 运用于我国的二代身份证，比特币也将ECC作为加密算法  椭圆曲线阿贝尔群 已知集合和运算(G,*)如果是群，必须要满足以下要求 封闭性：$\forall a b \in G, a*b\in G$ 结合性：$\forall a, b,c\in G, (ab)*c = a">
+  
+    <link rel="alternate" href="/atom.xml" title="Lvstone Blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Lvstone Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">neve give up</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://LvstoneF.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ECC算法-椭圆曲线算法" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/08/05/ECC算法-椭圆曲线算法/" class="article-date">
+  <time datetime="2019-08-05T08:49:47.425Z" itemprop="datePublished">2019-08-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="ECC算法-椭圆曲线算法"><a href="#ECC算法-椭圆曲线算法" class="headerlink" title="ECC算法-椭圆曲线算法"></a>ECC算法-椭圆曲线算法</h2><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+<li>基于离散对数设计的密码。</li>
+<li>ECC14 == RSA1024位密钥加密强度，而且计算量更小，速度更快，</li>
+<li>运用于我国的二代身份证，比特币也将ECC作为加密算法</li>
+</ul>
+<h2 id="椭圆曲线阿贝尔群"><a href="#椭圆曲线阿贝尔群" class="headerlink" title="椭圆曲线阿贝尔群"></a>椭圆曲线阿贝尔群</h2><ul>
+<li>已知集合和运算<code>(G,*)</code>如果是群，必须要满足以下要求<ol>
+<li>封闭性：$\forall a b \in G, a*b\in G$</li>
+<li>结合性：$\forall a, b,c\in G, (a<em>b)*c = a</em>(b*c)$</li>
+<li>单位元：$\xi e \in G, \forall a\in G, 有 ea = ae = a$</li>
+<li>逆元：$\forall a \in G, \xi b\in G, 使得ab = ba = e$</li>
+</ol>
+</li>
+<li>阿贝尔群还需要在满足<ul>
+<li>$a<em>b  =b</em>a$ </li>
+</ul>
+</li>
+<li>将椭圆定义到阿贝尔群内<ul>
+<li>任取椭圆曲线上两点 P， Q （若P，Q重合，则做切线），做直线交于椭圆的第三点R1，过R1做平行与Y轴的直线交椭圆与点R</li>
+<li>定义P+Q=R，加法的和也在椭圆曲线上，并具备加法交换律，结合律</li>
+</ul>
+</li>
+</ul>
+<h2 id="有限域-F-p-a-b-上"><a href="#有限域-F-p-a-b-上" class="headerlink" title="有限域$F_p(a,b)$上"></a>有限域$F_p(a,b)$上</h2><ul>
+<li><p>$F_p $ 上有p个元素，p为质素</p>
+</li>
+<li><p>基本运算都要加上$mod(p)$ </p>
+</li>
+<li><p>$F_p$内满足交换律，结合律，分配律</p>
+</li>
+<li><p>公式</p>
+<p>$x_3 \equiv \lambda ^2 - x_1 - x_2(mod(p))$</p>
+<p>$y_3 \equiv \lambda(x_1-x_3) - y_1$</p>
+<p>$\lambda = \frac{y_2-y_1}{x_2- x_1}  p\neq Q$</p>
+<p>$\lambda = \frac{3<em>x_1^2 + a_1}{2</em>y_1}  p= Q$</p>
+</li>
+</ul>
+<h2 id="椭圆曲线加密"><a href="#椭圆曲线加密" class="headerlink" title="椭圆曲线加密"></a>椭圆曲线加密</h2><ul>
+<li><p>椭圆曲线上的阶，存在最小的N，使得n P = 0, 则n为阶，如果n不存在，则为无限阶</p>
+</li>
+<li><p><code>K = kG</code>k为私钥，K 为公钥</p>
+</li>
+<li><p>用户A选<code>n_a</code>为密钥，$P_a  = n_a G$作为公钥，B向A发送消息$P_m$,可选取一个随机数k$C _m =  {kG, P_m + kP_a}$ </p>
+</li>
+<li><p>A 解密</p>
+<p>$P_m + kP_a - n_akG = P_m +k(n_aG)-  n_akG = P_m$ </p>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://LvstoneF.github.io/2019/08/05/ECC算法-椭圆曲线算法/" data-id="cjyy5otvc0002qcl294zrhavw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/08/05/MD5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/05/AES/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">八月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/08/05/祖冲之算法/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/SM4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/SM3/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/SM2椭圆曲线公钥算法/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/08/05/MD5/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Lvstone<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
