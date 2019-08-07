@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="SM系列,">
 
 
 
@@ -79,16 +79,18 @@
 
 
 
-<meta name="description" content="secrit">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lvstone Blog">
-<meta property="og:url" content="https://LvstoneF.github.io/index.html">
+<meta name="description" content="SM3 SM3 消息摘要，可以用MD5作为对比理解， sm3是国家密码杂凑算法标准， 由国家密码局2010年公布。 输出值为杂凑值长度为256比特（8*32）与国际标准SHA-256等长， sm3设计的安全性为128比特，与256比特椭圆曲线/sm2,sm4/sms4，AES-128安全性相同  算法过程 填充  对消息长度小于2^64位进行运算，填充方法与SHA-256一样，假设消息长度位L，在">
+<meta name="keywords" content="SM系列">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SM3">
+<meta property="og:url" content="https://LvstoneF.github.io/2019/08/07/SM3/index.html">
 <meta property="og:site_name" content="Lvstone Blog">
-<meta property="og:description" content="secrit">
+<meta property="og:description" content="SM3 SM3 消息摘要，可以用MD5作为对比理解， sm3是国家密码杂凑算法标准， 由国家密码局2010年公布。 输出值为杂凑值长度为256比特（8*32）与国际标准SHA-256等长， sm3设计的安全性为128比特，与256比特椭圆曲线/sm2,sm4/sms4，AES-128安全性相同  算法过程 填充  对消息长度小于2^64位进行运算，填充方法与SHA-256一样，假设消息长度位L，在">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-08-07T02:14:59.436Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lvstone Blog">
-<meta name="twitter:description" content="secrit">
+<meta name="twitter:title" content="SM3">
+<meta name="twitter:description" content="SM3 SM3 消息摘要，可以用MD5作为对比理解， sm3是国家密码杂凑算法标准， 由国家密码局2010年公布。 输出值为杂凑值长度为256比特（8*32）与国际标准SHA-256等长， sm3设计的安全性为128比特，与256比特椭圆曲线/sm2,sm4/sms4，AES-128安全性相同  算法过程 填充  对消息长度小于2^64位进行运算，填充方法与SHA-256一样，假设消息长度位L，在">
 
 
 
@@ -118,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="https://LvstoneF.github.io/">
+  <link rel="canonical" href="https://LvstoneF.github.io/2019/08/07/SM3/">
 
 
 
 
 
-  <title>Lvstone Blog</title>
+  <title>SM3 | Lvstone Blog</title>
   
 
 
@@ -143,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -277,9 +278,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -309,9 +310,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/07/SM3/" itemprop="url">SM3</a></h1>
+          <h1 class="post-title" itemprop="name headline">SM3</h1>
         
 
         <div class="post-meta">
@@ -345,6 +344,9 @@
           
 		  
 		  
+			<span class="post-meta-divider">|</span>
+			<span id="busuanzi_value_page_pv"></span>次阅读
+		
 
           
 
@@ -363,9 +365,7 @@
       
 
       
-        
-          
-            <h1 id="SM3"><a href="#SM3" class="headerlink" title="SM3"></a>SM3</h1><ul>
+        <h1 id="SM3"><a href="#SM3" class="headerlink" title="SM3"></a>SM3</h1><ul>
 <li>SM3 消息摘要，可以用MD5作为对比理解，</li>
 <li>sm3是国家密码杂凑算法标准， 由国家密码局2010年公布。</li>
 <li>输出值为杂凑值长度为256比特（8*32）与国际标准SHA-256等长，</li>
@@ -431,8 +431,6 @@
 <li>sm3test.cpp</li>
 </ul>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* sm3test.cpp</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"sm3.h"</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*输入最后的Hash后的值*/</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> *output)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Hash:\n"</span>);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">32</span>; i++) &#123;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"%02x"</span>, output[i]);</span><br><span class="line">		<span class="keyword">if</span> ((i + <span class="number">2</span>) % <span class="number">4</span> == <span class="number">0</span>)</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">" "</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*计算输入字符串的长度*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">inputLen</span><span class="params">(<span class="keyword">unsigned</span> <span class="keyword">char</span> *input)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> len = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (input[++len] != <span class="string">'\0'</span>);</span><br><span class="line">	<span class="keyword">return</span> len;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*可修改部分，input*/</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> grgc, <span class="keyword">char</span>* argv[])</span> </span>&#123;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">char</span> input[<span class="number">256</span>] = <span class="string">"abc"</span>;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">char</span> output[<span class="number">32</span>];</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Message: %s\n"</span>, input );</span><br><span class="line">	SM3Calc(input, inputLen(input), output);</span><br><span class="line">	show(output);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">char</span> input2[<span class="number">256</span>] = <span class="string">"lvjinhu"</span>;</span><br><span class="line">	<span class="comment">//int ilens = 7;</span></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">char</span> outputs[<span class="number">32</span>];</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"Message: %s\n"</span>, input2);</span><br><span class="line">	SM3Calc(input2, inputLen(input2), outputs);</span><br><span class="line">	show(outputs);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
       
     </div>
     
@@ -447,333 +445,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://LvstoneF.github.io/2019/08/07/512-最长特殊序列/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lvstone">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lvstone Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/07/512-最长特殊序列/" itemprop="url">512:最长特殊序列</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-07T10:06:17+08:00">
-                2019-08-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/SM系列/" rel="tag"># SM系列</a>
           
-            
-          
-
-          
-          
-
-          
-		  
-		  
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="512-最长特殊序列"><a href="#512-最长特殊序列" class="headerlink" title="512 最长特殊序列"></a>512 最长特殊序列</h1><h2 id="题设"><a href="#题设" class="headerlink" title="题设:"></a>题设:</h2><ul>
-<li><p>给定两个字符串，你需要从这两个字符串中找出最长的特殊序列。最长特殊序列定义如下：该序列为某字符串独有的最长子序列（即不能是其他字符串的子序列）。</p>
-<p>子序列可以通过删去字符串中的某些字符实现，但不能改变剩余字符的相对顺序。空序列为所有字符串的子序列，任何字符串为其自身的子序列。</p>
-<p>输入为两个字符串，输出最长特殊序列的长度。如果不存在，则返回 -1。</p>
-<ul>
-<li><p>示例 :</p>
-<p> 输入: “aba”, “cdc”<br>输出: 3<br>解析: 最长特殊序列可为 “aba” (或 “cdc”)<br>说明:</p>
-</li>
-<li><p>两个字符串长度均小于100。<br>字符串中的字符仅含有 ‘a’~’z’。</p>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><ul>
-<li>解题思路：<ul>
-<li>如果两个str1 ,str2 str1==str2, 长度内容一样，那么就返回-1</li>
-<li>如果两个的长度不一样str1.length()&gt; str2.length()，那么就一定是返回str1.length()</li>
-</ul>
-</li>
-</ul>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>C++</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">	<span class="function"><span class="keyword">int</span> <span class="title">findLUSlength</span><span class="params">(<span class="built_in">string</span> a, <span class="built_in">string</span> b)</span> </span>&#123;</span><br><span class="line">		<span class="keyword">if</span> (!a.compare(b))</span><br><span class="line">			<span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (a.length() &gt; b.length())</span><br><span class="line">				<span class="keyword">return</span> a.length();</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				<span class="keyword">return</span> b.length();</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://LvstoneF.github.io/2019/08/05/SM4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lvstone">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lvstone Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/05/SM4/" itemprop="url">SM4</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-05T19:46:28+08:00">
-                2019-08-05
-              </time>
+              <a href="/2019/08/07/512-最长特殊序列/" rel="next" title="512:最长特殊序列">
+                <i class="fa fa-chevron-left"></i> 512:最长特殊序列
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-		  
-		  
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="SM4"><a href="#SM4" class="headerlink" title="SM4"></a>SM4</h1><ul>
-<li><p>SM4是我国无线局域网标准WAPI中所采用的分组密码标准，然后被商用密码标准采用，（SM是商密的意思，目前公布的商密由SM2，SM3。 预计在国内的敏感但非机密的应用领域会逐渐取代3DES,AES等国外分组密码标准，用于通信加密，数据加密等应用场合。</p>
-</li>
-<li><p>密钥长度，分组长度为128，安全性相当于AES-128，不适用于需要长期保密的数据。</p>
-</li>
-</ul>
-<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><ul>
-<li>SM4 是一个分组算法，分组长度为128，密钥长度128，加密算法和密钥扩展都用到了32轮非线性迭代结构。解密与加密算法结构相同，只是轮加密的顺序相反，解密轮密钥是加密轮密钥的逆序。</li>
-</ul>
-<ol>
-<li>术语和定义：<ul>
-<li>Block Length 分组长度</li>
-<li>Key Length 密钥比特位数</li>
-<li>Key Expansion Algorithm 密钥扩展算法</li>
-<li>Rounds 轮函数的迭代次数</li>
-<li>Word 长度为32bite的组</li>
-<li>S-box S盒，8bite输入， 8 bite输出的置换</li>
-</ul>
-</li>
-<li>密钥参数和常量<ul>
-<li>加密密钥128bite, 表示为 $MK = (MK_0 …MK_3)$$MK$表示32bite的字</li>
-<li>轮密钥 $(rk_0 … .. rk_[31])$, 为32比特字，轮密钥由加密密钥生成。</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li>$FK = (FK_0 … FK_3)$为系统参数，$CK = (CK_0 … CK_(31)$ 为固定参数，用于密钥扩展，</li>
-</ul>
-<ol start="3">
-<li><p>轮函数F</p>
-<ul>
-<li>若输入为$(X_0 X_1, X_2, X_3)$, 轮密钥为$rk$   轮函数$F(X_0 X_1, X_2, X_3) =$ <code>(X[0])^T((X[1]^X[2]^X[3]^rk)</code></li>
-</ul>
-</li>
-<li><p>合成置换T</p>
-<ul>
-<li>由非线性变换 t  和线性变化L 复合而成 $T(.) = L(t(.))$</li>
-</ul>
-<ol>
-<li>非线性变换 t<ul>
-<li>由四个Sbox并行构成</li>
-<li>输入$A = (a0, a1, a2, a3) 输出为 B= （b0, b1, b2, b3） $ 则 $t(A) = (Sbox(a0), Sbox(a1), Sbox(a2), Sbox(a3))$</li>
-</ul>
-</li>
-<li>线性变换L<ul>
-<li><code>C = L(B) = B^(B &lt;&lt;&lt; 2)^(B&lt;&lt;&lt;10)^(B &lt;&lt;&lt; 18)^(B &lt;&lt;&lt; 24)</code></li>
-</ul>
-</li>
-</ol>
-</li>
-<li><p>密钥扩展算法</p>
-</li>
-</ol>
-<p><a href="http://dacas.cn/sharedimages/ARTICLES/SMAlgorithms/SM4.pdf" target="_blank" rel="noopener">SM4标准文</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -783,144 +484,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://LvstoneF.github.io/2019/08/05/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lvstone">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lvstone Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/08/05/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-05T16:08:24+08:00">
-                2019-08-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-		  
-		  
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -928,6 +496,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -948,8 +520,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1000,6 +581,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#SM3"><span class="nav-number">1.</span> <span class="nav-text">SM3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法过程"><span class="nav-number">1.1.</span> <span class="nav-text">算法过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#C-实现"><span class="nav-number">1.2.</span> <span class="nav-text">C++实现</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1148,6 +745,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
